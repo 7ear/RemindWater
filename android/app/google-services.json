@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "81760973330",
+    "project_id": "remindwater-ecf92",
+    "storage_bucket": "remindwater-ecf92.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:81760973330:android:d62628798944ddff881ecb",
+        "android_client_info": {
+          "package_name": "com.cezrt.remind_water"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgoJOY34THNa1UQ1cCCEhSZIAlwuV0yQk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
