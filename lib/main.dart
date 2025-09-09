@@ -9,12 +9,12 @@ void main() async {
   tz.setLocalLocation(tz.getLocation('Europe/Moscow'));
 
   await Firebase.initializeApp(
-      options: DefaultFirebaseOptions.currentPlatform,
+    options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  await notifications.initialize(initializationSettings);
+  // await notifications.initialize(initializationSettings);
 
-  showNotifications();
+  // showNotifications();
 
   final model = SharedModel();
   await model.loadValues();
