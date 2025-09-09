@@ -90,6 +90,10 @@ class _SettingsPageState extends State<SettingsPage> {
             fontSize: 26
           )
         ),
+        systemOverlayStyle: SystemUiOverlayStyle(
+          statusBarColor: Colors.transparent,
+          statusBarIconBrightness: Brightness.light,
+        ),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
