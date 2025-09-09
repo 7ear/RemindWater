@@ -26,8 +26,8 @@ class SnackbarCancell extends StatelessWidget {
         ),
         margin: const EdgeInsets.only(
           bottom: 100,
-          right: 100,
-          left: 100,
+          right: 20,
+          left: 20,
         ),
         duration: const Duration(seconds: 2),
         padding: const EdgeInsets.only(top: 5, bottom: 5),
