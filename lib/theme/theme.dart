@@ -2,11 +2,11 @@ import '../imports.dart';
 
 final theme = ThemeData(
   useMaterial3: false,
-  scaffoldBackgroundColor: const Color.fromARGB(255, 228, 239, 253),
+  scaffoldBackgroundColor: const Color.fromARGB(255, 255, 255, 255),
   splashColor: Colors.transparent,
   highlightColor: Colors.transparent,
   appBarTheme: AppBarTheme(
-    systemOverlayStyle:SystemUiOverlayStyle(
+    systemOverlayStyle: SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
       statusBarIconBrightness: Brightness.dark,
     ),
@@ -70,7 +70,9 @@ final theme = ThemeData(
       fontWeight: FontWeight.w600,
     ),
     labelLarge: TextStyle(
-
+      color: const Color.fromARGB(255, 255, 255, 255),
+      fontSize: 15,
+      fontWeight: FontWeight.w400,
     ),
   ),
   listTileTheme: ListTileThemeData(
