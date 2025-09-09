@@ -156,7 +156,7 @@ class HomePageState extends State<HomePage> with TickerProviderStateMixin {
               gradient: LinearGradient(
                 begin: Alignment.center,
                 end: Alignment.bottomCenter,
-                colors: [const Color.fromARGB(255, 228, 239, 253), const Color.fromARGB(255, 4, 0, 255)],
+                colors: [const Color.fromARGB(255, 255, 255, 255), const Color.fromARGB(255, 4, 0, 255)],
               ),
             ),
             child: Center(
@@ -165,7 +165,7 @@ class HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 children: [
                   Container(
                     padding: EdgeInsets.only(right: 3, left: 3),
-                    margin: EdgeInsets.only(top: 60),
+                    margin: EdgeInsets.only(top: 90),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -175,21 +175,49 @@ class HomePageState extends State<HomePage> with TickerProviderStateMixin {
                     ),
                   ),
                   Container(
-                    padding: EdgeInsets.only(top: 3, bottom: 3, left: 6, right: 6),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      border: Border.all(
-                        color: const Color.fromARGB(255, 0, 60, 255),
-                        width: 1
-                      )
+                    margin: EdgeInsets.only(bottom: 400),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          padding: EdgeInsets.only(top: 3, bottom: 3, left: 6, right: 6),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            border: Border.all(
+                              color: const Color.fromARGB(255, 0, 60, 255),
+                              width: 1
+                            )
+                          ),
+                          child: FutureBuilder(
+                            future: getNextNotificationTime(),
+                            builder: (context, snapshot) {
+                              return snapshot.hasData ? Text('Следущее напоминание в ${timeFormatter.format(snapshot.data!)}', style: GoogleFonts.roboto(textStyle: theme.textTheme.bodySmall)) : CircularProgressIndicator();
+                            }
+                          ),
+                        ),
+                        Container(
+                          width: 107,
+                          height: 28,
+                          margin: EdgeInsets.only(left: 5),
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: const Color.fromARGB(255, 231, 15, 8),
+                              elevation: 0.0,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20)
+                              ),
+                            ),
+                            onPressed: resetValues,
+                            child: Text('Отчистить', style: GoogleFonts.roboto(
+                              color: const Color.fromARGB(255, 255, 255, 255),
+                              fontSize: 15,
+                              fontWeight: FontWeight.w500
+                              )
+                            ),
+                          )
+                        )
+                      ],
                     ),
-                    margin: EdgeInsets.only(bottom: 270),
-                    child: FutureBuilder(
-                      future: getNextNotificationTime(),
-                        builder: (context, snapshot) {
-                          return snapshot.hasData ? Text('Следущее напоминание в ${timeFormatter.format(snapshot.data!)}', style: GoogleFonts.roboto(textStyle: theme.textTheme.bodySmall)) : CircularProgressIndicator();
-                        }
-                      ),
                   ),
                   SizedBox(
                     width: 210,
@@ -225,7 +253,7 @@ class HomePageState extends State<HomePage> with TickerProviderStateMixin {
                       children: [
                         Text('При нажатии будет добавлено: ${roundToTenths(model.changedWaterValue)}л', style: GoogleFonts.manrope(textStyle: theme.textTheme.titleSmall)),
                         IconButton(
-                          onPressed: () => {resetValues(),routeToSettings(context)},
+                          onPressed: () => routeToSettings(context),
                           icon: SvgPicture.asset(
                             'assets/images/edit.svg',
                             width: 18,
