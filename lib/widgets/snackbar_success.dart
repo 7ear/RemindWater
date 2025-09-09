@@ -26,8 +26,8 @@ class SnackbarSuccess extends StatelessWidget {
         ),
         margin: const EdgeInsets.only(
           bottom: 100,
-          right: 100,
-          left: 100,
+          right: 40,
+          left: 40,
         ),
         duration: const Duration(seconds: 2),
         padding: const EdgeInsets.only(top: 5, bottom: 5),
