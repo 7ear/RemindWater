@@ -175,7 +175,7 @@ class HomePageState extends State<HomePage> with TickerProviderStateMixin {
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.only(bottom: 400),
+                    margin: EdgeInsets.only(bottom: 300),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
