@@ -6,9 +6,11 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
     <application
-        android:label="remind_water"
+        android:label="Remind Water"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:adaptiveIcon="@drawable/adaptive_icon">
         <service 
         android:name="com.transistorsoft.flutter.backgroundfetch.HeadlessJobService" 
         android:permission="android.permission.BIND_JOB_SERVICE"/>
@@ -67,3 +69,4 @@
         </intent>
     </queries>
 </manifest>
+
