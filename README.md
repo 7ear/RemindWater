@@ -1,16 +1,16 @@
-# remind_water
+# 💧 Remind Water
 
-A new Flutter project.
+## 🚀 О проекте
+**Remind Water** — приложение для поддержания водного баланса. Автоматизированная система напоминаний помогает:
+- 🕒 Соблюдать питьевой режим
+- 📊 Анализировать потребление воды
+- 🎯 Достигать персональных целей гидратации
 
-## Getting Started
+## 📌 Почему это важно?
+По данным ВОЗ:
+> "Даже 2% потерянной жидкости снижают когнитивные функции на 20%"
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Наше решение помогает:
+1. Улучшить концентрацию 🧠
+2. Нормализовать метаболизм ⚖️
+3. Поддержать здоровье кожи 🌸
