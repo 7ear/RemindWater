@@ -12,9 +12,9 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  // await notifications.initialize(initializationSettings);
+  await notifications.initialize(initializationSettings);
 
-  // showNotifications();
+  showNotifications();
 
   final model = SharedModel();
   await model.loadValues();
